@@ -8,11 +8,6 @@ a{
   font-family: 'Prompt', sans-serif;
 }
 
-a img{
-  padding: 6px !important;
-  margin-left: 10px;
-}
-
 p{
   font-family: 'Prompt', sans-serif;
   font-style: normal;
@@ -207,6 +202,11 @@ nav{
 .grid img{
   padding-block-start: 15px;
   padding-inline-end: 90px;
+}
+
+.grid a img{
+  padding: 6px !important;
+  margin-left: 10px;
 }
 
 .box{
