@@ -1,9 +1,14 @@
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 body{
   margin: auto;
 }
 
 a{
-  font-weight: 400;
+  font-weight: 300;
   text-decoration: none;
   font-family: 'Prompt', sans-serif;
 }
@@ -11,7 +16,7 @@ a{
 p{
   font-family: 'Prompt', sans-serif;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 19px;
   line-height: 160%;
 
@@ -86,12 +91,12 @@ nav{
 }
 
 .navigation a:hover{
-  font-weight: 500;
+  font-weight: 400;
   color: #212353;
 }
 
 .navigation a:active{
-  font-weight: 500;
+  font-weight: 400;
   color: #212353;
 }
 
@@ -113,8 +118,9 @@ nav{
 
 .home{
   display: inline-flex;
-  width: 80%;
-  padding: 6% 13% 4% 13%;
+  width: -webkit-fill-available;
+  /* padding: 6% 13% 4% 13%; */
+  margin: 5% 14%;
 }
 
 .home img {
@@ -193,13 +199,14 @@ nav{
 .grid {
   display: grid;
   position: absolute;
-  grid: 438px/ 1fr 1fr;
-  margin: 2% 20%;
-  width: 65%;
+  grid: 430px/ 1fr 1fr;
+  margin: 10px 19%;
+  width: 60%;
   text-align: left;
 }
 
 .grid img{
+  position: absolute;
   padding-block-start: 15px;
   padding-inline-end: 90px;
 }
@@ -210,11 +217,113 @@ nav{
 }
 
 .box{
+  position: absolute;
   width: 235px;
-  margin: 12% 41%;
+  margin: 74px 250px;
 }
 
 .box p{
-  font-weight: 300;
+  font-weight: 200;
   font-size: 16px;
 }
+
+.slide{
+  display: -webkit-inline-block;
+  position: absolute;
+  width: 1118px;
+  height: 709px;
+  top: 2789px;
+  margin-left: 21%;
+
+  background: #9C69E2;
+  border-radius: 50px;
+}
+
+.gallery{
+  width: 100%;
+}
+
+.slide h2{
+  color: white;
+  font-size: 40px;
+  margin: 85px 0px 55px 130px;
+}
+
+.gallery-cell {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  width: 850px;
+  height: 380px;
+
+  background: #ffff;
+  border: 1px solid #9C69E2;
+  box-sizing: border-box;
+  border-radius: 20px;
+  box-shadow: 0px 20px 0px rgba(156, 105, 226, 0.5);
+}
+
+.gallery-cell:before {
+  width: 850px;
+  height: 380px;
+  display: block;
+  text-align: left;
+  content: counter(gallery-cell);
+  background: linear-gradient(270deg, #ffffff 9.75%, rgba(226, 224, 224, 0) 100%);
+}
+
+.flickity-page-dots{
+  text-align: left;
+  margin-left: 130px;
+  margin-bottom: -55px;
+}
+
+.flickity-page-dots .dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  margin: 0 5px;
+  background: #ffff;
+  opacity: 1;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.flickity-page-dots .dot.is-selected {
+  background: #F063B8;
+  width: 12px;
+  height: 12px;
+  margin-bottom: -2px;
+}
+
+.flickity-prev-next-button{
+  position: absolute;
+  left: 20%;
+  top: 20%;
+  width: 60%;
+  height: 60%;
+  background: url('./src/assets/white-arrow.svg');
+}
+
+.flickity-button-icon{
+  display: none;
+}
+
+.flickity-button-icon {
+  fill: currentColor;
+}
+
+.flickity-button {
+  position: absolute;
+  background: hsla(0,0%,100%,.75);
+  border: none;
+  color: #333;
+}
+
+.slide button{
+  background: none;
+  float: right;
+  border: none;
+}
+
+    
