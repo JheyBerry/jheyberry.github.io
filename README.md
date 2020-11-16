@@ -5,4 +5,4 @@ My personal website :)
 
 <img src='./src/assets/biulding.svg'>
 
-Made with 🖤 by Jhey Vilvok.
+Made with 🖤  by Jhey Vilvok.
