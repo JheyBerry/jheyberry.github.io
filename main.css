@@ -5,6 +5,7 @@
 
 body{
   margin: auto;
+  overflow-x: hidden;
 }
 
 a{
@@ -175,7 +176,7 @@ nav{
 
 .about img{
   padding: 9%;
-  width: 35%;
+  width: 53%;
 }
 
 .about h2{
@@ -230,6 +231,7 @@ nav{
 .slide{
   display: -webkit-inline-block;
   position: absolute;
+  overflow: visible !important;
   width: 1118px;
   height: 709px;
   top: 2789px;
@@ -253,7 +255,7 @@ nav{
   position: relative;
   width: 100%;
   overflow: hidden;
-  width: 850px;
+  width: 820px;
   height: 380px;
 
   background: #ffff;
@@ -264,12 +266,29 @@ nav{
 }
 
 .gallery-cell:before {
-  width: 850px;
+  width: 830px;
   height: 380px;
   display: block;
   text-align: left;
   content: counter(gallery-cell);
   background: linear-gradient(270deg, #ffffff 9.75%, rgba(226, 224, 224, 0) 100%);
+}
+
+.shadow{
+  position: relative;
+  width: 100%;
+  width: 820px;
+  height: 380px;
+
+  background: #ffff;
+  border: 1px solid #9C69E2;
+  box-sizing: border-box;
+  border-radius: 20px;
+  box-shadow: 0px 20px 0px rgba(88, 23, 179, 0.5);
+}
+
+.flickity-viewport {
+  overflow: visible !important;
 }
 
 .flickity-page-dots{
@@ -298,11 +317,12 @@ nav{
 
 .flickity-prev-next-button{
   position: absolute;
-  left: 20%;
-  top: 20%;
-  width: 60%;
-  height: 60%;
-  background: url('./src/assets/white-arrow.svg');
+  background-image: url('./src/assets/white-arrow.svg') !important;
+  background-repeat: no-repeat !important;
+  width: 35px;
+  height: 16px;
+  top: 453px;
+  border-radius: 0%;
 }
 
 .flickity-button-icon{
@@ -320,10 +340,23 @@ nav{
   color: #333;
 }
 
+.flickity-prev-next-button.next {
+  right: 54px;
+  transform: rotateY(180deg);
+}
+
+.flickity-prev-next-button.previous {
+  right: 100px;
+  left: auto;
+  top: 461px
+}
+
 .slide button{
   background: none;
   float: right;
   border: none;
 }
 
-    
+.flickity-button:hover {
+  background: none; 
+}
