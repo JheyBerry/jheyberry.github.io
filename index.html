@@ -42,6 +42,7 @@
         <img src=./src/assets/home.svg alt='Ilustração da home'/>
       </div>
     </section>
+    
     <section class='about'>
       <img src="./src/assets/about.svg" alt='Ilustração do sobre'/>
       <div class='sobre'>
@@ -103,17 +104,31 @@
     <section class='projetos'></section>
     <div class='slide'>
       <h2>Projetos</h2>
-      <div class="main-gallery js-flickity" data-flickity-options='{ "freeScroll": true, "percentPosition": false }'>
-        <div class="gallery-cell shadow">
-          <img src='./src/assets/html.svg' />
+      <div class="carousel js-flickity" data-flickity-options='{ "freeScroll": true, "percentPosition": false }'>
+        <div class="carousel-cell shadow">
+          <img class="carousel-cell-image" src='./src/assets/html.svg'/>
         </div>
-        <div class="gallery-cell shadow"></div>
-        <div class="gallery-cell shadow"></div>
-        <div class="gallery-cell shadow"></div>
-        <div class="gallery-cell shadow"></div>  
+        <div class="carousel-cell shadow">
+          <p>pão</p>
+        </div>
+        <div class="carousel-cell shadow"></div>
+        <div class="carousel-cell shadow"></div>
+        <div class="carousel-cell shadow"></div>  
       </div>
     </div>
-    <section class='contato'></section>
+
+    <hr class="line">
+
+    <section class='contato'>
+      <footer class="conhecer">
+        <div class="paozinho">
+          <h2>Bora nos conectar!</h4>
+          <p>Get limited 1 week free try our features!</p>
+          <a target='blank' href="https://www.linkedin.com/in/jheneyvilvok/" style="background:#F063B8; color:#FFFFFF"> Linkedin </a>
+          <a target='blank' href="https://github.com/JheyBerry" style="background: #FFFFFF; box-shadow: 0px 5px 5px rgba(75, 93, 104, 0.1);"> GitHub <img src="./src/assets/arrow.svg" alt='seta'/> </a>
+        </div>
+      </footer>
+    </section>
   </body>
   <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 </html>

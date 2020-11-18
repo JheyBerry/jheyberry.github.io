@@ -1,3 +1,5 @@
+/* Geral */
+
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -70,6 +72,8 @@ h4{
 
   color: #212353;
 }
+
+/* Home */
 
 nav{
   display: inline-flex;
@@ -160,6 +164,8 @@ nav{
   color: #FFFFFF;
 }
 
+/* About */
+
 .sobre{
   margin: auto 0px;
 }
@@ -192,6 +198,8 @@ nav{
   width: 474px;
   height: 172px;
 }
+
+/* Tecnologias*/
 
 .tecnologias{
   text-align: center;
@@ -228,6 +236,12 @@ nav{
   font-size: 16px;
 }
 
+/* Projetos */
+
+.flickity-viewport {
+  overflow: visible !important;
+}
+
 .slide{
   display: -webkit-inline-block;
   position: absolute;
@@ -236,13 +250,9 @@ nav{
   height: 709px;
   top: 2789px;
   margin-left: 21%;
-
+  
   background: #9C69E2;
   border-radius: 50px;
-}
-
-.gallery{
-  width: 100%;
 }
 
 .slide h2{
@@ -251,44 +261,88 @@ nav{
   margin: 85px 0px 55px 130px;
 }
 
-.gallery-cell {
+.carousel-cell {
   position: relative;
-  width: 100%;
-  overflow: hidden;
-  width: 820px;
+  width: 800px;
   height: 380px;
+  margin-right: 35px;
 
-  background: #ffff;
+  background:  -webkit-linear-gradient(right, rgba(255,255,255,0.5), rgba(255,255,255, 1));
   border: 1px solid #9C69E2;
   box-sizing: border-box;
   border-radius: 20px;
-  box-shadow: 0px 20px 0px rgba(156, 105, 226, 0.5);
+  box-shadow: 0px 20px 0px rgba(109, 73, 158, 0.2);
+  opacity: 60%;
+  transition:opacity 1s 
 }
 
-.gallery-cell:before {
-  width: 830px;
-  height: 380px;
-  display: block;
-  text-align: left;
-  content: counter(gallery-cell);
-  background: linear-gradient(270deg, #ffffff 9.75%, rgba(226, 224, 224, 0) 100%);
+.carousel-cell.shadow.is-selected{
+  box-shadow: 0px 20px 0px rgba(109, 73, 158, 0.5);
+  background: #ffffff;
+  transition: 0.5s;
+  opacity:100%;
+  transition:opacity 0.5s
 }
 
-.shadow{
-  position: relative;
-  width: 100%;
-  width: 820px;
-  height: 380px;
+/* Pontos e botões do slider */
 
-  background: #ffff;
-  border: 1px solid #9C69E2;
-  box-sizing: border-box;
-  border-radius: 20px;
-  box-shadow: 0px 20px 0px rgba(88, 23, 179, 0.5);
+.flickity-button {
+  position: absolute;
+  background: hsla(0,0%,100%,.75);
+  border: none;
+  color: #333;
 }
 
-.flickity-viewport {
-  overflow: visible !important;
+.flickity-button-icon{
+  display: none;
+  fill: currentColor;
+}
+
+.flickity-prev-next-button{
+  position: absolute;
+  background-image: url('./src/assets/white-arrow.svg') !important;
+  background-repeat: no-repeat !important;
+  width: 25px;
+  height: 16px;
+  top: 453px;
+  border-radius: 0%;
+  transition: 0.7s;
+}
+
+.flickity-prev-next-button.previous {
+  right: 143px;
+  left: auto;
+  top: 461px
+}
+
+.flickity-prev-next-button.next {
+  right: 134px;
+  transform: rotateY(180deg);
+  -webkit-transform-origin-x: right;
+}
+
+.slide button{
+  background: none;
+  float: right;
+  border: none;
+}
+
+.flickity-button:hover {
+  background: none; 
+  width: 30px;
+  transition: 0.7s;
+}
+
+.flickity-button:active {
+  opacity:.6;
+  width: 30px;
+}
+
+.flickity-button:disabled {
+  opacity:.3;
+  width: 15px;
+  cursor:auto;
+  pointer-events:none
 }
 
 .flickity-page-dots{
@@ -309,74 +363,38 @@ nav{
 }
 
 .flickity-page-dots .dot.is-selected {
-  background: #F063B8;
+  background: #68C9BA;
   width: 10px;
   height: 10px;
   margin-bottom: -2px;
 }
 
-.flickity-prev-next-button{
+/* Linha de divisão */
+
+.line {
   position: absolute;
-  background-image: url('./src/assets/white-arrow.svg') !important;
-  background-repeat: no-repeat !important;
-  width: 25px;
-  height: 16px;
-  top: 453px;
-  border-radius: 0%;
-  transition: 0.7s;
+  width: -webkit-fill-available;
+  height: 5px;
+  top: 3610px;
+  margin-bottom: 69px;
+  background: #9C69E2;
+  opacity: 0.2;
 }
 
-.flickity-button-icon{
-  display: none;
-}
+/* Footer */
 
-.flickity-button-icon {
-  fill: currentColor;
-}
-
-.flickity-button {
+.conhecer{
   position: absolute;
-  background: hsla(0,0%,100%,.75);
-  border: none;
-  color: #333;
+  left: 240px;
+  top: 3750px;
+  width: 80%;
+  align-items: left;
 }
 
-.flickity-prev-next-button.next {
-  right: 134px;
-  transform: rotateY(180deg);
-  -webkit-transform-origin-x: right;
-}
+.paozinho a{
+  border-radius: 50px;
+  padding: 10px;
 
-.flickity-prev-next-button.previous {
-  right: 143px;
-  left: auto;
-  top: 461px
-}
-
-.slide button{
-  background: none;
   float: right;
-  border: none;
 }
 
-.flickity-button:hover {
-  background: none; 
-  width: 35px;
-}
-
-.flickity-button:active {
-  opacity:.6;
-  width: 30px;
-}
-
-.flickity-button::after{
-  opacity:.6;
-  width: 30px;
-}
-
-.flickity-button:disabled {
-  opacity:.3;
-  width: 15px;
-  cursor:auto;
-  pointer-events:none
-}
