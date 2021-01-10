@@ -271,20 +271,53 @@ nav{
   border: 1px solid #9C69E2;
   box-sizing: border-box;
   border-radius: 20px;
-  box-shadow: 0px 20px 0px rgba(109, 73, 158, 0.2);
-  opacity: 60%;
-  transition:opacity 1s 
 }
 
-.carousel-cell.shadow.is-selected{
-  box-shadow: 0px 20px 0px rgba(109, 73, 158, 0.5);
-  background: #ffffff;
-  transition: 0.5s;
-  opacity:100%;
-  transition:opacity 0.5s
+.carousel-cell.shadow.is-selected {
+  box-shadow: 0px 20px 0px rgba(95, 33, 182, 0.5);
+  background: #FFFFFF;
 }
 
-/* Pontos e botões do slider */
+.gallery-cell:before {
+  width: 830px;
+  height: 380px;
+  display: block;
+  text-align: left;
+  content: counter(gallery-cell);
+  background: linear-gradient(270deg, rgba(255, 255, 255, 0) 9.75%, rgba(255, 255, 255, 0.796875) 81.67%, #FFFFFF 100%) !important;
+}
+
+.gallery-cell:after{
+  width: 830px;
+  height: 380px;
+  display: block;
+  text-align: left;
+  content: counter(gallery-cell);
+  background: linear-gradient(270deg, #ffffff 8.75%, rgba(226, 224, 224, 0) 100%);
+}
+
+.shadow{
+  position: relative;
+  width: 100%;
+  width: 820px;
+  height: 380px;
+
+  border: 1px solid #9C69E2;
+  box-sizing: border-box;
+  border-radius: 20px;
+  box-shadow: 0px 20px 0px rgba(122, 60, 209, 0.5);
+  background: linear-gradient(270deg, #FFFFFF 9.75%, rgba(255, 255, 255, 0) 100%);
+}
+
+.flickity-viewport {
+  overflow: visible !important;
+}
+
+.flickity-page-dots{
+  text-align: left;
+  margin-left: 130px;
+  margin-bottom: -55px;
+}
 
 .flickity-button {
   position: absolute;
@@ -329,6 +362,14 @@ nav{
 
 .flickity-button:hover {
   background: none; 
+<<<<<<< Updated upstream
+=======
+  width: 30px;
+}
+
+.flickity-button:active {
+  opacity:.6;
+>>>>>>> Stashed changes
   width: 30px;
   transition: 0.7s;
 }
@@ -340,7 +381,7 @@ nav{
 
 .flickity-button:disabled {
   opacity:.3;
-  width: 15px;
+  width: 20px;
   cursor:auto;
   pointer-events:none
 }
